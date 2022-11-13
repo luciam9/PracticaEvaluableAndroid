@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">PracticaEvaluable</string>
-    <string name="textoNombre">Nombre</string>
-    <string name="textoTelefono">Telefono</string>
+    <string name="app_name">GymDex</string>
+    <string name="textoEjercicio">Ejercicio</string>
+    <string name="textoDia">Dia</string>
     <string name="botonGuardar">Guardar</string>
     <string name="botonBuscar">Buscar</string>
 </resources>
