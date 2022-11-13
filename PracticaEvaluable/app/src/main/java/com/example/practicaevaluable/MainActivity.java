@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // On selecting a spinner item
         String item = adapterView.getItemAtPosition(i).toString();
 
-        List<String> lista = Arrays.asList("hola", "2");//this.gymDex.search(item);
+        List<String> lista = this.gymDex.search(item);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_view, lista);
         ListView list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);

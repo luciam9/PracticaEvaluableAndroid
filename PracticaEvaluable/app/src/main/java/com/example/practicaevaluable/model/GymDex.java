@@ -30,7 +30,7 @@ public class GymDex {
     public List<String> search(String dia){
         List<String> mapa = new ArrayList<>();
         SQLiteDatabase readableDataBase = dataBase.getReadableDatabase();
-        Cursor cursor = readableDataBase.rawQuery("select nombre, parteCuerpo from horario where dia = "+dia, null);
+        Cursor cursor = readableDataBase.rawQuery("select nombre, parteCuerpo from Ejercicios where dia = '"+dia+"'", null);
 
         if(cursor.moveToFirst()){
             do {
