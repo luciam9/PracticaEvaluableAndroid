@@ -35,8 +35,9 @@ public class GymDex {
         if(cursor.moveToFirst()){
             do {
                 String name = cursor.getString(0);
+                String parteCuerpo = cursor.getString(1);
 
-                mapa.add(name);
+                mapa.add(name + " (" + parteCuerpo + ")");
             }while (cursor.moveToNext());
         }
         cursor.close();

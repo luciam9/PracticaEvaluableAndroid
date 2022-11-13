@@ -21,7 +21,7 @@ public class AdminSQLite extends SQLiteOpenHelper{
         database.execSQL("create table Ejercicios(nombre text primary key, parteCuerpo text, dia text)");
         database.execSQL("create table Dias(nombre text primary key)");
 
-        List<String> dias = Arrays.asList("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
+        List<String> dias = Arrays.asList("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
 
         ContentValues values = new ContentValues();
 
