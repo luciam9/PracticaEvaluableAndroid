@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GymDex</string>
     <string name="textoEjercicio">Ejercicio</string>
-    <string name="textoParteCuerpo">Ejercicio</string>
+    <string name="textoParteCuerpo">Parte del cuerpo</string>
     <string name="textoDia">Dia</string>
     <string name="botonGuardar">Guardar</string>
     <string name="botonBuscar">Buscar</string>

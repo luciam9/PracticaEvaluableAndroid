@@ -10,19 +10,20 @@ import android.widget.Toast;
 import com.example.practicaevaluable.model.AdminSQLite;
 
 public class AddActivity extends AppCompatActivity {
-    private EditText et_exercise, et_bodyPart;
+    private EditText et_ejercicio, et_parteCuerpo;
+    //private Button btn_save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        et_exercise = (EditText) findViewById(R.id.txtExercise);
-        et_bodyPart = (EditText) findViewById(R.id.txtBodyPart);
+        et_ejercicio = (EditText) findViewById(R.id.textoEjercicio);
+        et_parteCuerpo = (EditText) findViewById(R.id.textoParteCuerpo);
     }
 
     public void saveExercises(View view){
-        AdminSQLite admin = new AdminSQLite(this, "GymDex", null, 1);
+        AdminSQLite admin = new AdminSQLite(this, "horario", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         //TODO: Change the day, take from the MainActivity
@@ -31,23 +32,23 @@ public class AddActivity extends AppCompatActivity {
         if(b != null)
             dia = b.getString("dia");
 
-        String ejercicio = et_exercise.getText().toString();
-        String parteCuerpo = et_bodyPart.getText().toString();
+        String ejercicio = et_ejercicio.getText().toString();
+        String parteCuerpo = et_parteCuerpo.getText().toString();
 
         if(!ejercicio.isEmpty() && !parteCuerpo.isEmpty()){
             ContentValues entry = new ContentValues();
-            entry.put("Día", dia);
-            entry.put("Ejercicio", ejercicio);
-            entry.put("ParteCuerpo", parteCuerpo);
+            entry.put("dia", dia);
+            entry.put("nombre", ejercicio);
+            entry.put("parteCuerpo", parteCuerpo);
 
-            db.insert("Timetable", null, entry);
+            db.insert("Ejercicios", null, entry);
             db.close();
 
             //TODO: Devolver a MainActivity, mostrando ejercicios en el día seleccionado
 
 
-            et_exercise.setText("");
-            et_bodyPart.setText("");
+            et_ejercicio.setText("");
+            et_parteCuerpo.setText("");
 
             Toast.makeText(this, "Success adding the exercise to the selected day.", Toast.LENGTH_SHORT).show();
 
