@@ -30,7 +30,6 @@ public class AdminSQLite extends SQLiteOpenHelper{
             database.insert("Dias", null, values);
         }
 
-        //database.close();
     }
 
     @Override

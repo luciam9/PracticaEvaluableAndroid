@@ -4,9 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.util.ArrayMap;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class GymDex {
 
@@ -25,9 +27,21 @@ public class GymDex {
         writableDataBase.insert(table, null, data);
     }
 
-    public void search(String nombre){
+    public List<String> search(String dia){
+        List<String> mapa = new ArrayList<>();
         SQLiteDatabase readableDataBase = dataBase.getReadableDatabase();
-        readableDataBase.rawQuery("select nombre, numero from contactos where nombre = "+nombre, null);
+        Cursor cursor = readableDataBase.rawQuery("select nombre, parteCuerpo from horario where dia = "+dia, null);
+
+        if(cursor.moveToFirst()){
+            do {
+                String name = cursor.getString(0);
+
+                mapa.add(name);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        readableDataBase.close();
+        return mapa;
     }
 
     public List<String> getDays(){
