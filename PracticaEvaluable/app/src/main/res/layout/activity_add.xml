@@ -10,50 +10,37 @@
         android:id="@+id/textoEjercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="188dp"
         android:ems="10"
         android:hint="@string/textoEjercicio"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textoParteCuerpo"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="160dp"
+        android:onClick="saveExercises"
+        android:text="@string/botonGuardar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textoParteCuerpo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="576dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="@string/textoParteCuerpo"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoEjercicio" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/botonGuardar"
-        android:onClick="saveExercises"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textoEjercicio"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

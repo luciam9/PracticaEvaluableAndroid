@@ -11,7 +11,6 @@ import com.example.practicaevaluable.model.AdminSQLite;
 
 public class AddActivity extends AppCompatActivity {
     private EditText et_ejercicio, et_parteCuerpo;
-    //private Button btn_save;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
