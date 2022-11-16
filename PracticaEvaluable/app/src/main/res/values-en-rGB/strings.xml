@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymDex</string>
+    <string name="textoEjercicio">Exercise</string>
+    <string name="textoDia">Day</string>
+    <string name="botonGuardar">Save</string>
+    <string name="botonBuscar">Search</string>
+    <string name="textoParteCuerpo">Part of the body</string>
+</resources>
